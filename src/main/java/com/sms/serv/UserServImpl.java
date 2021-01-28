@@ -1,6 +1,8 @@
 package com.sms.serv;
 
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -72,6 +74,12 @@ public class UserServImpl implements UserService {
 	public Iterable<User> findByDeptAndRole(int dept_id, int role_id) {
 		
 		return userRepo.findByDeptAndRole(dept_id, role_id);
+	}
+
+
+	@Override
+	public Optional<User> findByEmailAndPassword(String email, String password) {
+		return userRepo.findByEmailAndPassword(email, password);
 	}
 
 }

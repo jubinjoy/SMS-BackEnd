@@ -1,6 +1,7 @@
 package com.sms.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -29,7 +30,10 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(" from User where dept_id =:dept_id AND role_id =:role_id")
     Iterable<User> findByDeptAndRole(@Param("dept_id") int dept_id,@Param("role_id") int role_id);
 
+    @Query(" from User where email =:email AND password =:password")
+    Optional<User> findByEmailAndPassword(@Param("email") String email,@Param("password") String password);
 
+    
 }
 
 //select user_id,password,department_name from User LEFT JOIN department ON User.dept_id=department.dept_id
