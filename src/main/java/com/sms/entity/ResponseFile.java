@@ -11,8 +11,37 @@ public class ResponseFile {
 	  private String course;
 	  private String description;
 	  private String id;
+	  private String studentName ; 
 	  
-	  public ResponseFile(String name, String url, String type, long size) {
+	  //this is for submitted assignments from the student 
+	  //it also contains the studentName on it .
+	  public ResponseFile(String id ,String name, String url, String type, String department, String course,
+			String description, String studentName) {
+		this.name = name;
+		this.url = url;
+		this.type = type;
+		this.department = department;
+		this.course = course;
+		this.description = description;
+		this.id = id;
+		this.studentName = studentName;
+	}
+
+
+
+	public String getStudentName() {
+		return studentName;
+	}
+
+
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+
+
+	public ResponseFile(String name, String url, String type, long size) {
 	    this.name = name;
 	    this.url = url;
 	    this.type = type;
