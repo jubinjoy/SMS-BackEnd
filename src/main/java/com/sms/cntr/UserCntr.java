@@ -75,9 +75,6 @@ public class UserCntr {
 			stsStatus.setMsg("email already exist ");
 		}
 		
-	//	String password = SecurityUtility.randomPassword();
-		//String encryptedPassword = SecurityUtility.passwordEncoder().encode(password);
-		//user.setPassword(encryptedPassword);
 				
 		try {
 			

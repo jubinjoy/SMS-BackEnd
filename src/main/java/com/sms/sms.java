@@ -12,10 +12,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "com.sms")
-public class sms {
+public class Sms {
 
 	public static void main(String[] args) {
-		SpringApplication.run(sms.class, args);
+		SpringApplication.run(Sms.class, args);
 	}
 
 }

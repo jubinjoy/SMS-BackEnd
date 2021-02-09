@@ -115,8 +115,6 @@ public class AssignmentCntr {
 		System.out.println(doc.getName());
 		System.out.println(doc.getType());
 		return ResponseEntity.ok()
-				//.contentType(MediaType.parseMediaType("png/pdf"))
-				//.contentType(MediaType.parseMediaType("application/text"))
 				.contentType(MediaType.parseMediaType(doc.getType()))
 				.header(HttpHeaders.CONTENT_DISPOSITION,"attachment:filename=\""+doc.getName()+"\"")
 				.body(new ByteArrayResource(doc.getData()));
